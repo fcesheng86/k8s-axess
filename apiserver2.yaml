@@ -41,6 +41,12 @@ spec:
               value: sba-nic
             - name: spring.datasource.url
               value: jdbc:postgresql://postgres:5432/smartbankapp
+            - name: cloud.aws.region.static
+              value: ap-south-1
+            - name: cloud.aws.end-point.uri
+              value: https://sqs.ap-south-1.amazonaws.com/175652158808/nic-sqs
+            - name: spring.datasource.password
+              value: postgres
             - name: server.port
               value: "8080"
             - name: ELASTIC_APM_SERVER_URL 
@@ -54,7 +60,7 @@ spec:
                   name: app-config
                   key: ELASTIC_APM_APPLICATION_PACKAGES
             - name: ELASTIC_APM_SERVICE_NAME 
-              value: "weather-services-jon" 
+              value: "sba-nic" 
             - name: ELASTIC_APM_ENVIRONMENT 
               value: prod
             - name: ELASTIC_APM_LOG_LEVEL 
